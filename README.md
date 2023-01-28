@@ -1,5 +1,7 @@
 # CSS
-main grid layout
+main grid layout:
 header
 main aside
 footer
+linear-gradient
+::after
