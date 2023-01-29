@@ -4,30 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
+    <title>Table Responsive</title>
     <style>
       table,
       th,
       td {
-        border: 1px solid black;
+        border: 0px solid black;
         border-collapse: collapse;
       }
-      td,
-      th {
+      
+      th
+      {
         background-color: #eee;
       }
       th {
         background-color: #ccc;
         color: #666;
       }
+      tr:nth-child(odd) {
+        background-color: #eee;
+      }
+      .summary {
+        text-align: right;
+      }
       @media only screen and (max-width: 378px) {
-      h2, th, caption{color:green;}
-      h2::after{content:", mobile 378px";
-          }}
+        h2,
+        th,
+        caption,
+        tfoot {
+          color: green;
+        }
+        h2::after {
+          content: ", mobile 378px";
+        }
+        span {
+          display: none;
+        }
+        tbody tr, tbody td {
+        border: 1px solid black;
+      }
+    }
     </style>
-    <h2>A basic HTML table</h2>
+  </head>
+  <body>
+    <h2><span>A basic responsive </span>HTML table</h2>
 
     <table style="width: 100%">
       <caption>
@@ -44,10 +64,22 @@
         <td>Germany</td>
       </tr>
       <tr>
+        <td>Huawei</td>
+        <td>Li Thu</td>
+        <td>China</td>
+      </tr>
+      <tr>
         <td>Centro comercial Moctezuma</td>
         <td>Francisco Chang</td>
         <td>Mexico</td>
       </tr>
+      <tfoot>
+        <tr>
+          <td class="summary">3 items</td>
+          <td>- all</td>
+          <td></td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>
