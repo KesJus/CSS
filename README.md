@@ -4,4 +4,8 @@ header
 main aside
 footer
 linear-gradient
-::after
+::after last-child 
+
+table nth-child(even) - zebra
+nav li right
+reginfo form
