@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>The responsive nav element</h1>
+    
+    <p>The nav element defines a set of navigation links:</p>
+    <style>
+    body{background-color: #eee;}
+    a {text-decoration:none;
+      color:#333;
+      padding:1em;}
+    a::after {
+      content: " ||";
+    }
+    nav > a:last-child:after {
+  content: "";
+    }
+    /* nav{display:inline;} */
+    /* a::after a:last-child{
+      content: "";
+    } */
+    @media only screen and (max-width: 400px) {
+      body {
+        background-color: lightblue;
+      }
+      h1{font-weight:0.7em;}
+      nav{padding:0.5em;
+      background-color:#333;
+      /* display:inline; */
+      }
+      a{color:#eee;
+      padding:1em;}
+      nav a{display:block;}
+      a:hover{background-color:#666;
+      padding:1em;
+      border:1px solid #eee;
+      border-radius:5px;}
+      a::after {
+      content: "";
+    }
+      h1::after {
+      content: " mobile 400px";
+    }
+    }
+    </style>
+    <nav>
+    <a href="/html/">HTML</a> 
+    <a href="/css/">CSS</a> 
+    <a href="/js/">JavaScript</a> 
+    <a href="/python/">Python</a>
+    <h2 style="float:right">Logo</h2>
+    </nav>
+    
+    </body>
+</html>

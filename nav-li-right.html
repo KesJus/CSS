@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .nav {
+        background-color: #333;
+        list-style-type: none;
+        text-align: right;
+        margin: 0.5em;
+        padding: 1em;
+
+      }
+      a {text-decoration: none;
+      color:#eee;}
+      a:hover{background-color:#666}
+      .nav li {
+        display: inline-block;
+         font-size: 20px;
+        padding: 20px;
+      }
+      .nav li:first-child {float:left;}
+      h1::before{content:"Horizontal "}
+      @media only screen and (max-width: 600px) {
+        .nav li{
+          display:block;}
+          h1::before{content:"Vertical "
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Navigation Links</h1>
+    <p>
+      Note: If you resize the browser window, the links will automatically break
+      when it becomes too crowded.
+    </p>
+     <ul class="nav">
+      <li>
+        <a href="#Logo" style="border: 1px solid #666; padding: 0.7em">Logo</a>
+      </li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#clients">Our Clients</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <p>
+        By default, list items are displayed vertically. In this example we use
+        display: inline-block to display them horizontally (side by side). Inline-blockTryit: Use display: inline-block to display list items
+        horizontally
+      </p>
+  </body>
+</html>
